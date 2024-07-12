@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <script type="text/javascript" src="/script.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    <script src="chartsJS.js"></script>
+</head>
+<body>
+     <div class="topbar">
+           <!---<div class="toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><circle cx="4" cy="12" r="1" fill="currentColor"/><rect width="14" height="2" x="7" y="11" fill="currentColor" rx=".94" ry=".94"/><rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".94" ry=".94"/><rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".94" ry=".94"/></svg>
+            </div>-->
+            <div class="logo">
+               <!---<img src="https://demo.ektefa.net/assets/images/logo.png" width="120px">-->
+               <img src="C:\Users\azaim\OneDrive\سطح المكتب\Dashboard\HR-logo.png" width="120px">
+
+               <!--<h1> HR Dashboard</h1>-->
+            </div>
+
+            
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search worker name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/></svg>
+                </label>
+            </div>
+
+<div class="notifi">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 36 36"><path fill="white" d="m32.85 28.13l-.34-.3A14.37 14.37 0 0 1 30 24.9a12.63 12.63 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.63 12.63 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93l-.34.3v2.82h29.8Z" class="clr-i-solid clr-i-solid-path-1"/><path fill="white" d="M15.32 32a2.65 2.65 0 0 0 5.25 0Z" class="clr-i-solid clr-i-solid-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 20 20"><path fill="white" d="m1.574 5.286l7.5 4.029c.252.135.578.199.906.199c.328 0 .654-.064.906-.199l7.5-4.029c.489-.263.951-1.286.054-1.286H1.521c-.897 0-.435 1.023.053 1.286m17.039 2.203l-7.727 4.027c-.34.178-.578.199-.906.199s-.566-.021-.906-.199s-7.133-3.739-7.688-4.028C.996 7.284 1 7.523 1 7.707V15c0 .42.566 1 1 1h16c.434 0 1-.58 1-1V7.708c0-.184.004-.423-.387-.219"/></svg>
+</div>
+
+            <div class="user">
+                <img src="https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?t=st=1716034572~exp=1716035172~hmac=5c17217747e6f02a62fcfa2936f9dee09488eee7d2ea0a3ffbb7da5844073ad6" alt="">
+                <h5>System Admin</h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 10l5 5l5-5"/></svg>
+        
+            </div>
+        </div>
+
+        <div class="container">
+        <!--aside Section-->
+        <aside>
+            <!--<div class="top">
+                <div class="logo">
+                    <img src="C:\Users\azaim\OneDrive\سطح المكتب\Dashboard\logo.png" width="120px">
+                </div>
+
+                <div class="close">
+                    <span class="material-symbols-outlined">
+                        close
+                        </span>
+                </div>
+            </div>-->
+            <!--End top-->
+
+            <div class="Sidebar">
+                <a href="#" class="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 5a2 2 0 0 1 2-2h6v18H4a2 2 0 0 1-2-2zm12-2h6a2 2 0 0 1 2 2v5h-8zm0 11h8v5a2 2 0 0 1-2 2h-6z"/></svg>
+                        <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 24 24"><path fill="currentColor" d="M3.5 8a5.5 5.5 0 1 1 8.596 4.547a9.005 9.005 0 0 1 5.9 8.18a.751.751 0 0 1-1.5.045a7.5 7.5 0 0 0-14.993 0a.75.75 0 0 1-1.499-.044a9.005 9.005 0 0 1 5.9-8.181A5.5 5.5 0 0 1 3.5 8M9 4a4 4 0 1 0 0 8a4 4 0 0 0 0-8m8.29 4q-.221 0-.434.03a.75.75 0 1 1-.212-1.484a4.53 4.53 0 0 1 3.38 8.097a6.69 6.69 0 0 1 3.956 6.107a.75.75 0 0 1-1.5 0a5.19 5.19 0 0 0-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0 0 17.29 8"/></svg>
+                        <h3>Employee Self Service</h3>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 36 36"><path fill="currentColor" d="M16.43 16.69a7 7 0 1 1 7-7a7 7 0 0 1-7 7m0-11.92a5 5 0 1 0 5 5a5 5 0 0 0-5-5M22 17.9a25.41 25.41 0 0 0-16.12 1.67a4.06 4.06 0 0 0-2.31 3.68v5.95a1 1 0 1 0 2 0v-5.95a2 2 0 0 1 1.16-1.86a22.91 22.91 0 0 1 9.7-2.11a23.58 23.58 0 0 1 5.57.66Zm.14 9.51h6.14v1.4h-6.14z"/><path fill="currentColor" d="M33.17 21.47H28v2h4.17v8.37H18v-8.37h6.3v.42a1 1 0 0 0 2 0V20a1 1 0 0 0-2 0v1.47H17a1 1 0 0 0-1 1v10.37a1 1 0 0 0 1 1h16.17a1 1 0 0 0 1-1V22.47a1 1 0 0 0-1-1"/></svg>
+                        <h3>Human recourses</h3>
+                </a>
+                <a href="#"> 
+<svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 16 16"><path fill="currentColor" d="M10.386 9.836a2.5 2.5 0 1 1 3.611.667C15.212 11.173 16 12.46 16 14v1.5a.5.5 0 1 1-1 0V14c0-1.724-1.276-3-3-3c-.91 0-1.298-.02-1.805-.122c-1.25-.254-2.333-1-3.585-2.566a.5.5 0 1 1 .78-.624c.9 1.124 1.653 1.74 2.434 2.043c.155.052.345.083.562.105m1.785.128q.125.015.251.034L12.5 10a1.5 1.5 0 1 0-.33-.036M9.78 11.97a.5.5 0 0 1 .5.5a1 1 0 0 1-.05.231c-.179.38-.23.774-.23 1.302v1.5a.5.5 0 1 1-1 0v-1.5c0-.657.072-1.186.307-1.696a.5.5 0 0 1 .473-.337M5.958 5.772a.5.5 0 0 1-.78.625L3.11 3.812a.5.5 0 1 1 .78-.624zM1 11h5.5a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5V.5A.5.5 0 0 1 .5 0h12a.5.5 0 0 1 .5.5v3a.5.5 0 1 1-1 0V1H1z"/></svg>
+                        <h3>Training courses</h3>
+                   
+                </a>
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M7 19.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m15 0a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/><path d="M19.5 17c-.168-2.453-1.105-3-4.273-3H8.773c-3.168 0-4.105.547-4.273 3M12 6.5L13 5m3.5 1.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0"/></g></svg>
+                         <h3>Attendance management</h3>
+                </a>
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 2048 2048"><path fill="currentColor" d="M2048 1280v768H1024v-768h256v-256h512v256zm-640 0h256v-128h-256zm512 384h-128v128h-128v-128h-256v128h-128v-128h-128v256h768zm0-256h-768v128h768zm-355-512q-54-61-128-94t-157-34q-80 0-149 30t-122 82t-83 123t-30 149q0 92-41 173t-116 136q45 23 84 53t73 68v338q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149H0q0-73 20-141t57-129t90-108t118-81q-74-54-115-135t-42-174q0-79 30-149t82-122t122-83t150-30q92 0 173 41t136 116q38-75 97-134t135-98q-74-54-115-135t-42-174q0-79 30-149t82-122t122-83t150-30q79 0 149 30t122 82t83 123t30 149q0 92-41 173t-116 136q68 34 123 85t93 118zM512 1408q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 53 20 99t55 82t81 55t100 20m512-1024q0 53 20 99t55 82t81 55t100 20q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100"/></svg> 
+                         <h3>Recruitment</h3>
+                 </a>
+
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M21 21H10c-3.3 0-4.95 0-5.975-1.025S3 17.3 3 14V3"/><path d="m17.705 9.333l-2.874 4.652c-.419.677-.894 1.701-1.756 1.55c-1.014-.179-1.5-1.69-2.372-2.19c-.71-.408-1.223.083-1.638.655M21 4l-1.854 3M5 20l2.526-3.733"/></g></svg>          
+                         <h3>Employee evaluation</h3>
+                </a>
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 20 20"><path fill="currentColor" d="M10.6 9c-.4-.1-.8-.3-1.1-.6c-.3-.1-.4-.4-.4-.6c0-.2.1-.5.3-.6c.3-.2.6-.4.9-.3c.6 0 1.1.3 1.4.7l.9-1.2c-.3-.3-.6-.5-.9-.7c-.3-.2-.7-.3-1.1-.3V4H9.4v1.4c-.5.1-1 .4-1.4.8c-.4.5-.7 1.1-.6 1.7c0 .6.2 1.2.6 1.6c.5.5 1.2.8 1.8 1.1c.3.1.7.3 1 .5c.2.2.3.5.3.8c0 .3-.1.6-.3.9c-.3.3-.7.4-1 .4c-.4 0-.9-.1-1.2-.4c-.3-.2-.6-.5-.8-.8l-1 1.1c.3.4.6.7 1 1c.5.3 1.1.6 1.7.6V16h1.1v-1.5c.6-.1 1.1-.4 1.5-.8c.5-.5.8-1.3.8-2c0-.6-.2-1.3-.7-1.7c-.5-.5-1-.8-1.6-1M10 2c-4.4 0-8 3.6-8 8s3.6 8 8 8s8-3.6 8-8s-3.6-8-8-8m0 14.9c-3.8 0-6.9-3.1-6.9-6.9S6.2 3.1 10 3.1s6.9 3.1 6.9 6.9s-3.1 6.9-6.9 6.9"/></svg>
+                          <h3>Salary and payroll</h3>
+                 </a>
+
+                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M9 21h6m-6 0v-5m0 5H3.6a.6.6 0 0 1-.6-.6v-3.8a.6.6 0 0 1 .6-.6H9m6 5V9m0 12h5.4a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6h-4.8a.6.6 0 0 0-.6.6V9m0 0H9.6a.6.6 0 0 0-.6.6V16"/></svg>
+                         <h3>Statistics & Reports</h3>
+                 </a>
+
+                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons"width="20px" height="20px" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1783 988v18q0 9 1 18v18q0 9-1 18l259 161l-159 383l-297-68q-24 26-50 50l68 297l-383 159l-161-259h-18q-9 0-18 1h-18q-9 0-18-1l-161 259l-383-159l68-297q-26-24-50-50l-297 68L6 1221l259-161v-18q0-9-1-18v-18q0-9 1-18L6 827l159-383l297 68q24-26 50-50l-68-297L827 6l161 259h18q9 0 18-1h18q9 0 18 1L1221 6l383 159l-68 297q26 24 50 50l297-68l159 383zm-117 130q2-24 4-47t2-48q0-23-2-47t-4-47l236-147l-86-208l-271 63q-31-38-63-70t-71-64l63-271l-208-86l-148 236q-23-2-47-4t-47-2q-24 0-47 2t-48 4L782 146l-208 86l63 271q-38 31-70 63t-64 71l-271-63l-86 208l236 148q-2 24-4 47t-2 48q0 23 2 47t4 47l-236 147l86 208l271-63q31 38 63 70t71 64l-63 271l208 86l148-236q23 2 47 4t47 2q24 0 47-2t48-4l147 236l208-86l-63-271q38-31 70-63t64-71l271 63l86-208zm-642-470q78 0 146 29t120 81t80 119t30 147q0 78-29 146t-81 120t-119 80t-147 30q-78 0-146-29t-120-81t-80-119t-30-147q0-78 29-146t81-120t119-80t147-30m0 640q55 0 103-20t84-57t56-84t21-103q0-55-20-103t-57-84t-84-56t-103-21q-55 0-103 20t-84 57t-56 84t-21 103q0 55 20 103t57 84t84 56t103 21"/></svg>
+                         <h3>Global settings</h3>
+                 </a>
+
+                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons" width="20px" height="20px" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3 7V4.37A3.93 3.93 0 0 1 7 .5a3.93 3.93 0 0 1 4 3.87V7M1.5 5.5h1A.5.5 0 0 1 3 6v3a.5.5 0 0 1-.5.5h-1a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m11 4h-1A.5.5 0 0 1 11 9V6a.5.5 0 0 1 .5-.5h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1M9 12.25a2 2 0 0 0 2-2V8m-2 4.25a1.25 1.25 0 0 1-1.25 1.25h-1.5a1.25 1.25 0 0 1 0-2.5h1.5A1.25 1.25 0 0 1 9 12.25"/></svg>
+                          <h3>Support Center</h3>
+                 </a>
+
+
+            
+
+
+            </div>
+        </aside>
+    
+        <!--End aSide Section-->
+       
+
+        <!--Main Section start-->
+        <main>
+           <!--- <div class="search">
+                <label>
+                    <input type="text" placeholder="Search worker name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314"/></svg>
+                </label>
+            </div> -->
+            <div class="hey">
+            <h4>Good Morning</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 128 128"><path fill="#fac036" d="M39.11 79.56c-1.1 1.03-2.21-.2-2.21-.2S18.42 59.78 17.22 58.9c-1.69-1.23-5.31-3.16-8.93.57c-1.51 1.55-3.97 5 .6 10.56c.99 1.2 29.78 31.54 31.46 33.18c0 0 13.3 12.94 21.35 17.81c2.23 1.35 4.74 2.78 7.67 3.78c2.92 1 6.22 1.69 9.7 1.69c3.48.04 7.09-.63 10.5-1.88c3.41-1.26 6.59-3.09 9.48-5.2c.71-.54 1.43-1.08 2.1-1.66l1.94-1.6a58.67 58.67 0 0 0 3.82-3.53c2.43-2.42 4.62-5.01 6.55-7.66c1.92-2.66 3.55-5.41 4.85-8.15c1.3-2.74 2.21-5.49 2.76-8.09c.58-2.59.74-5.04.65-7.18c-.02-2.14-.45-3.97-.8-5.43c-.4-1.46-.83-2.55-1.17-3.27c-.33-.72-.51-1.1-.51-1.1c-.46-1.29-.9-2.52-1.29-3.63a889.622 889.622 0 0 0-4.51-12.47l.01.03c-4.85-13.17-10.06-26.74-10.06-26.74c-.79-2.39-3.7-3.22-5.84-1.68c-6.18 4.44-8.07 10.92-5.89 17.83l5.59 15.32c.79 1.71-1.39 3.69-2.85 2.5c-4.59-3.74-14.3-14.05-14.3-14.05c-4.34-4.16-28.83-29.27-30.47-30.8c-3.3-3.07-7.46-4.65-10.63-2.32c-3.24 2.38-4.14 6.06-1.01 10.08c.85 1.09 25.6 27.24 25.6 27.24c1.44 1.51-.26 3.65-1.85 2.18c0 0-30.79-32.12-32.18-33.62c-3.15-3.42-8.21-4.17-11.21-1.35c-2.93 2.75-2.86 7.26.34 10.8c1.02 1.12 22.71 24.02 31.39 33.4c.58.63 1.03 1.47.17 2.26c-.01.01-.88.95-2-.25c-2.36-2.52-25.93-27.08-27.24-28.41c-3.01-3.06-7.05-4.51-10.3-1.53c-2.96 2.71-3.44 7.44-.04 10.78l28.55 30.18s.93 1.1-.11 2.07"/><path fill="#e48c15" d="m85.46 54.4l2.41 2.58s-13.79 13.31-4.39 33.75c0 0 1.22 2.59-.38 3.02c0 0-1.4.78-3-3.2c0-.01-9.49-19.42 5.36-36.15"/><path fill="none" stroke="#444" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" d="M63.28 10.2s5.81.88 11.19 6.64c5.38 5.77 7.87 13.18 7.87 13.18M77.44 3.5s4.87 2.45 8.63 8.5c3.76 6.05 4.67 13.05 4.67 13.05m-55.03 85.68s-5.86.39-12.35-4.09s-10.52-11.18-10.52-11.18m18.69 25.1s-5.44.23-11.68-3.22s-10.44-9.12-10.44-9.12"/></svg>
+        </div>
+        <h1 style="color: #2384d8;;">Welcome System Admin</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            
+            <div class="insights">
+                <div class="ontime">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons2" width="1.30em" height="1.30em" viewBox="0 0 16 16"><path fill="currentColor" d="M7 14s-1 0-1-1s1-4 5-4s5 3 5 4s-1 1-1 1zm4-6a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"/></svg>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total On Time</h3>
+                            <h1>90</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="25" cy="40" cx="30"></circle>
+                            </svg>
+                            <div class="number">80%</div>
+                        </div>
+                    </div>
+                </div>
+                <!--End ontime-->
+
+                <div class="late">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons2" width="1.30em" height="1.30em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"/></svg>
+                      <div class="middle">
+                        <div class="left">
+                            <h3>Total Late</h3>
+                            <h1>30</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="25" cy="40" cx="30"></circle>
+                            </svg>
+                            <div class="number">18%</div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Late-->
+
+                <div class="absent">
+                    <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icons2" width="1.30em" height="1.30em" viewBox="0 0 48 48"><path fill="currentColor" d="M24 4c-5.523 0-10 4.477-10 10s4.477 10 10 10s10-4.477 10-10S29.523 4 24 4M12.25 28A4.25 4.25 0 0 0 8 32.249V33c0 3.755 1.942 6.567 4.92 8.38c2.465 1.501 5.645 2.331 9.102 2.557a4.47 4.47 0 0 1 .46-2.46L29.222 28zm31.244 18H26.498c-1.858 0-3.067-1.96-2.234-3.625l8.498-16.993c.921-1.843 3.547-1.843 4.468 0l8.498 16.993C46.561 44.04 45.352 46 43.494 46M36 31a1 1 0 1 0-2 0v6a1 1 0 1 0 2 0zm-1 11.25a1.25 1.25 0 1 0 0-2.5a1.25 1.25 0 0 0 0 2.5"/></svg>
+                </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Absent</h3>
+                            <h1>2</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="25" cy="40" cx="30"></circle>
+                            </svg>
+                            <div class="number">2%</div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Absent-->
+            </div>
+            <!--end insights-->
+
+           
+
+              
+              <!--Start Statical-->
+              <div class="chartsBx">
+                <div class="chart">
+                    <h1>Attendance Last 7 Days</h1>
+                    <canvas id="myChart"> </canvas>
+                </div>
+              </div>
+             
+              <script>
+                var xValues = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+                var yValues = [55, 49, 44, 24, 15];
+                var barColors = ["red", "green","blue","orange","brown"];
+                
+                new Chart("myChart", {
+                  type: "bar",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      label: 'On time',
+                        data: [80, 90, 60, 90, 90],
+                        backgroundColor: "#B6D2FF",
+                        fill: false
+                    }, {
+                        label: 'Late',
+                            data: [50, 30, 40, 9, 10],
+                            backgroundColor: "#66A5FD",
+                            fill: false
+                        }, {
+                            label: 'Absent',
+                            data: [20, 30, 10, 5, 10],
+                            backgroundColor: "#0066FF",
+                            fill: false
+                        }, {
+                            label: 'Vacation',
+                            data: [10, 10, 10, 10, 10],
+                            backgroundColor: "#0039B5",
+                            fill: false
+                        }, {
+                            label: 'Exempted',
+                            data: [20, 40, 50, 60, 40],
+                            backgroundColor: "#032360",
+                            fill: false
+                        }]
+
+                  },
+                  options: {
+                    legend: {display: true},
+                    title: {
+                      display: false,
+                      text: "Attendance Last 7 Days"
+                      
+                    }
+                  }
+                });
+                </script>
+                <!--End Statical-->
+
+
+                <!--Jobs start-->
+
+                <div class="jobs">
+                    <div class="applications>">
+                        <div class="precentge">+20%</div>
+                        <div class="center">
+                            <h1>3</h1>
+                            <h3> Total Applications</h3>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="interviews>" style="background-color: #5790C1;">
+                        <div class="precentge">+10%</div>
+                        <div class="center">
+                            <h1>10</h1>
+                            <h3> Upcoming Interviews</h3>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="applied" style="background-color: #2384D8;">
+                        <div class="precentge">+10%</div>
+                        <div class="center">
+                            <h1>3</h1>
+                            <h3> Job Applied</h3>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <!--Table Start-->
+                <div class="tasks">
+                    <h2> Pending Tasks</h2>
+                    <div class="tbl-header">
+                    <table border="0">
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Type</th>
+                                <th>Employee Name</th>
+                                <th>Branch</th>
+                                <th>Department</th>
+
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>12/5/2024</td>
+                                <td>Leave</td>
+                                <td>Annual Vaction</td>
+                                <td>Maram Alotaibi</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>12/5/2024</td>
+                                <td>Loan</td>
+                                <td>Test</td>
+                                <td>Mohammed Ahmed</td>
+                                <td>Riyadh Branch</td>
+                                <td>HR Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>12/5/2024</td>
+                                <td>EOS</td>
+                                <td>Contract expired</td>
+                                <td>Asma alasmri</td>
+                                <td>Riyadh Branch</td>
+                                <td>HR Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>12/5/2024</td>
+                                <td>Leave</td>
+                                <td>Annual Vaction</td>
+                                <td>Rakan majed</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>12/5/2024</td>
+                                <td>Leave</td>
+                                <td>Annual Vaction</td>
+                                <td>Nasser alharbi</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>12/5/2024</td>
+                                <td>Leave</td>
+                                <td>Annual Vaction</td>
+                                <td>Rakan majed</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>12/5/2024</td>
+                                <td>Leave</td>
+                                <td>Annual Vaction</td>
+                                <td>Nasser alharbi</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>10</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>11</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>12</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>13</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>14</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>15</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>16</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>17</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>18</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>19</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                            <tr>
+                                <td>20</td>
+                                <td>12/5/2024</td>
+                                <td>Employee form</td>
+                                <td>Survey</td>
+                                <td>Fahad khalid</td>
+                                <td>Riyadh Branch</td>
+                                <td>IT Department</td>
+                            </tr>
+
+                           
+
+                        </tbody>
+                    </table>
+                </div>
+
+                </div>
+
+
+<script>
+
+    $(window).on("load resize ", function () {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({ 'padding-right': scrollWidth });
+    }).resize();
+
+
+</script>
+
+           
+        
+            </main>
+
+        <!--Main section end-->
+
+
+       <div class="right">
+
+        <!--Schedule Start-->
+
+        <div class="calender">
+            <h1>Your Schedule</h1>
+        </div>
+
+        
+        <div class="wrapper">
+            <header>
+              <p class="current-date"></p>
+              <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+              </div>
+            </header>
+            <div class="calendar">
+              <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+              <ul class="days"></ul>
+            </div>
+
+            <div class="meeting">
+                <h1>Manager</h1>
+            </div>
+                <div class="details">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 36 36"><path fill="#474747" d="M32.25 6H29v2h3v22H4V8h3V6H3.75A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6" class="clr-i-outline clr-i-outline-path-1"/><path fill="#474747" d="M8 14h2v2H8z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#474747" d="M14 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-3"/><path fill="#474747" d="M20 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-4"/><path fill="#474747" d="M26 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#474747" d="M8 19h2v2H8z" class="clr-i-outline clr-i-outline-path-6"/><path fill="#474747" d="M14 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-7"/><path fill="#474747" d="M20 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-8"/><path fill="#474747" d="M26 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-9"/><path fill="#474747" d="M8 24h2v2H8z" class="clr-i-outline clr-i-outline-path-10"/><path fill="#474747" d="M14 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-11"/><path fill="#474747" d="M20 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-12"/><path fill="#474747" d="M26 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-13"/><path fill="#474747" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-14"/><path fill="#474747" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-15"/><path fill="#474747" d="M13 6h10v2H13z" class="clr-i-outline clr-i-outline-path-16"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                    <h4>20 May 2024</h4>
+
+            
+            </div>
+
+            <div class="arrow">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 1024 1024"><path fill="#2d9cf4" d="M340.864 149.312a30.59 30.59 0 0 0 0 42.752L652.736 512L340.864 831.872a30.59 30.59 0 0 0 0 42.752a29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"/></svg>
+            </div>
+
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 12 12"><path fill="#474747" d="M6 .5A4.5 4.5 0 0 1 10.5 5c0 1.863-1.42 3.815-4.2 5.9a.5.5 0 0 1-.6 0C2.92 8.815 1.5 6.863 1.5 5A4.5 4.5 0 0 1 6 .5m0 1A3.5 3.5 0 0 0 2.5 5c0 1.355 1.059 2.918 3.224 4.653L6 9.871l.276-.218C8.441 7.918 9.5 6.355 9.5 5A3.5 3.5 0 0 0 6 1.5M6 4a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></svg>
+                <h4>Zoom meeting</h4>
+        </div>
+
+
+
+        <div class="meeting">
+            <h1>Network engineer</h1>
+        </div>
+            <div class="details">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 36 36"><path fill="#474747" d="M32.25 6H29v2h3v22H4V8h3V6H3.75A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6" class="clr-i-outline clr-i-outline-path-1"/><path fill="#474747" d="M8 14h2v2H8z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#474747" d="M14 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-3"/><path fill="#474747" d="M20 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-4"/><path fill="#474747" d="M26 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#474747" d="M8 19h2v2H8z" class="clr-i-outline clr-i-outline-path-6"/><path fill="#474747" d="M14 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-7"/><path fill="#474747" d="M20 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-8"/><path fill="#474747" d="M26 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-9"/><path fill="#474747" d="M8 24h2v2H8z" class="clr-i-outline clr-i-outline-path-10"/><path fill="#474747" d="M14 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-11"/><path fill="#474747" d="M20 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-12"/><path fill="#474747" d="M26 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-13"/><path fill="#474747" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-14"/><path fill="#474747" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-15"/><path fill="#474747" d="M13 6h10v2H13z" class="clr-i-outline clr-i-outline-path-16"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                <h4>20 May 2024</h4>
+
+        
+        </div>
+
+        <div class="arrow">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 1024 1024"><path fill="#2d9cf4" d="M340.864 149.312a30.59 30.59 0 0 0 0 42.752L652.736 512L340.864 831.872a30.59 30.59 0 0 0 0 42.752a29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"/></svg>
+        </div>
+
+        <div class="location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 12 12"><path fill="#474747" d="M6 .5A4.5 4.5 0 0 1 10.5 5c0 1.863-1.42 3.815-4.2 5.9a.5.5 0 0 1-.6 0C2.92 8.815 1.5 6.863 1.5 5A4.5 4.5 0 0 1 6 .5m0 1A3.5 3.5 0 0 0 2.5 5c0 1.355 1.059 2.918 3.224 4.653L6 9.871l.276-.218C8.441 7.918 9.5 6.355 9.5 5A3.5 3.5 0 0 0 6 1.5M6 4a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></svg>
+            <h4>Zoom meeting</h4>
+    </div>
+
+
+    <div class="meeting">
+        <h1>HR team</h1>
+    </div>
+        <div class="details">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 36 36"><path fill="#474747" d="M32.25 6H29v2h3v22H4V8h3V6H3.75A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6" class="clr-i-outline clr-i-outline-path-1"/><path fill="#474747" d="M8 14h2v2H8z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#474747" d="M14 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-3"/><path fill="#474747" d="M20 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-4"/><path fill="#474747" d="M26 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#474747" d="M8 19h2v2H8z" class="clr-i-outline clr-i-outline-path-6"/><path fill="#474747" d="M14 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-7"/><path fill="#474747" d="M20 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-8"/><path fill="#474747" d="M26 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-9"/><path fill="#474747" d="M8 24h2v2H8z" class="clr-i-outline clr-i-outline-path-10"/><path fill="#474747" d="M14 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-11"/><path fill="#474747" d="M20 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-12"/><path fill="#474747" d="M26 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-13"/><path fill="#474747" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-14"/><path fill="#474747" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-15"/><path fill="#474747" d="M13 6h10v2H13z" class="clr-i-outline clr-i-outline-path-16"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+            <h4>20 May 2024</h4>
+
+    
+    </div>
+
+    <div class="arrow">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 1024 1024"><path fill="#2d9cf4" d="M340.864 149.312a30.59 30.59 0 0 0 0 42.752L652.736 512L340.864 831.872a30.59 30.59 0 0 0 0 42.752a29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"/></svg>
+    </div>
+
+    <div class="location">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 12 12"><path fill="#474747" d="M6 .5A4.5 4.5 0 0 1 10.5 5c0 1.863-1.42 3.815-4.2 5.9a.5.5 0 0 1-.6 0C2.92 8.815 1.5 6.863 1.5 5A4.5 4.5 0 0 1 6 .5m0 1A3.5 3.5 0 0 0 2.5 5c0 1.355 1.059 2.918 3.224 4.653L6 9.871l.276-.218C8.441 7.918 9.5 6.355 9.5 5A3.5 3.5 0 0 0 6 1.5M6 4a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></svg>
+        <h4>Zoom meeting</h4>
+</div>
+
+
+
+          </div>
+
+
+          
+          
+          <script>
+              const daysTag = document.querySelector(".days"),
+      currentDate = document.querySelector(".current-date"),
+      prevNextIcon = document.querySelectorAll(".icons span");
+      
+      // getting new date, current year and month
+      let date = new Date(),
+      currYear = date.getFullYear(),
+      currMonth = date.getMonth();
+      
+      // storing full name of all months in array
+      const months = ["January", "February", "March", "April", "May", "June", "July",
+                    "August", "September", "October", "November", "December"];
+      
+      const renderCalendar = () => {
+          let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+          lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+          lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+          lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+          let liTag = "";
+      
+          for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+              liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+          }
+      
+          for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+              // adding active class to li if the current day, month, and year matched
+              let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
+                           && currYear === new Date().getFullYear() ? "active" : "";
+              liTag += `<li class="${isToday}">${i}</li>`;
+          }
+      
+          for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+              liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+          }
+          currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+          daysTag.innerHTML = liTag;
+      }
+      renderCalendar();
+      
+      prevNextIcon.forEach(icon => { // getting prev and next icons
+          icon.addEventListener("click", () => { // adding click event on both icons
+              // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
+              currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+      
+              if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
+                  // creating a new date of current year & month and pass it as date value
+                  date = new Date(currYear, currMonth, new Date().getDate());
+                  currYear = date.getFullYear(); // updating current year with new date year
+                  currMonth = date.getMonth(); // updating current month with new date month
+              } else {
+                  date = new Date(); // pass the current date as date value
+              }
+              renderCalendar(); // calling renderCalendar function
+          });
+      });
+          </script>
+
+          <!--End Schedule-->
+
+          <!--Events Start-->
+
+          <div class="subjectevents">
+            <h1>Events & News</h1>
+            <h5>See all</h5>
+           </div>
+
+            <div class="events">
+
+            <div class="eventdetail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 48 48"><path fill="#bfa136" fill-rule="evenodd" d="M12 7a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v1h5a1 1 0 0 1 1 1v6a5 5 0 0 1-5 5h-1.683A12.02 12.02 0 0 1 26 27.834V34h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H16a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h6v-6.166A12.02 12.02 0 0 1 12.683 20H11a5 5 0 0 1-5-5V9a1 1 0 0 1 1-1h5zm24 9v-6h4v5a3 3 0 0 1-3 3h-1zm-24-6H8v5a3 3 0 0 0 3 3h1z" clip-rule="evenodd"/></svg>
+                <h3>Awards ceremonies</h3>
+                <div class="details">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 36 36"><path fill="#474747" d="M32.25 6H29v2h3v22H4V8h3V6H3.75A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6" class="clr-i-outline clr-i-outline-path-1"/><path fill="#474747" d="M8 14h2v2H8z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#474747" d="M14 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-3"/><path fill="#474747" d="M20 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-4"/><path fill="#474747" d="M26 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#474747" d="M8 19h2v2H8z" class="clr-i-outline clr-i-outline-path-6"/><path fill="#474747" d="M14 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-7"/><path fill="#474747" d="M20 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-8"/><path fill="#474747" d="M26 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-9"/><path fill="#474747" d="M8 24h2v2H8z" class="clr-i-outline clr-i-outline-path-10"/><path fill="#474747" d="M14 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-11"/><path fill="#474747" d="M20 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-12"/><path fill="#474747" d="M26 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-13"/><path fill="#474747" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-14"/><path fill="#474747" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-15"/><path fill="#474747" d="M13 6h10v2H13z" class="clr-i-outline clr-i-outline-path-16"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                <h4>20 May 2024</h4>
+            </div>
+            <div class="timea">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 32 32"><path fill="#474747" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14m0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4"/><path fill="#474747" d="M20.59 22L15 16.41V7h2v8.58l5 5.01z"/></svg>
+               <h4>4:00PM</h4>
+            </div>
+
+
+            </div>
+
+            <div class="eventdetail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 64 64"><path fill="#64a8dc" d="M63.841 18.646c-.245-3.85-1.071-6.977-3.752-10.198c-5.368-6.439-17.71-7.511-23.23-1.312c-.963.912-1.871 2.01-2.785 3.322l-2.064 2.969l-2.067-2.969c-.916-1.312-1.827-2.411-2.79-3.322C21.627.937 9.287 2.008 3.913 8.448C1.229 11.669.404 14.796.158 18.646C-.192 30.092 8.114 39.257 9.139 40.6c5.637 6.613 11.786 12.866 18.03 18.627c1.13.989 2.106 1.813 3.082 2.629c.587.479 1.166.963 1.749 1.439c.582-.477 1.159-.961 1.743-1.439c.979-.815 1.956-1.64 3.082-2.629c6.247-5.761 12.397-12.01 18.03-18.627c1.026-1.343 9.332-10.508 8.98-21.954"/><path fill="#aad5ee" d="M60.4 16.604a10.153 10.153 0 0 0-.457-2.909a9.042 9.042 0 0 0-1.17-2.42C55.8 6.906 49.322 5.332 43.91 6.438c-2.109.508-4.225 1.302-5.195 3.318c-.331.865.365 1.281 1.439 1.228c3.895-.435 8.201-.043 11.646 1.63c.856.42 1.661.918 2.396 1.503c2.471 1.913 3.537 4.887 4.02 7.837c1.201-.242 1.854-1.683 2.01-2.965c.14-.793.215-1.599.176-2.385"/></svg>      
+                 <h3>Employee fun day</h3>
+                <div class="details">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 36 36"><path fill="#474747" d="M32.25 6H29v2h3v22H4V8h3V6H3.75A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6" class="clr-i-outline clr-i-outline-path-1"/><path fill="#474747" d="M8 14h2v2H8z" class="clr-i-outline clr-i-outline-path-2"/><path fill="#474747" d="M14 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-3"/><path fill="#474747" d="M20 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-4"/><path fill="#474747" d="M26 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-5"/><path fill="#474747" d="M8 19h2v2H8z" class="clr-i-outline clr-i-outline-path-6"/><path fill="#474747" d="M14 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-7"/><path fill="#474747" d="M20 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-8"/><path fill="#474747" d="M26 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-9"/><path fill="#474747" d="M8 24h2v2H8z" class="clr-i-outline clr-i-outline-path-10"/><path fill="#474747" d="M14 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-11"/><path fill="#474747" d="M20 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-12"/><path fill="#474747" d="M26 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-13"/><path fill="#474747" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-14"/><path fill="#474747" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-outline clr-i-outline-path-15"/><path fill="#474747" d="M13 6h10v2H13z" class="clr-i-outline clr-i-outline-path-16"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                <h4>1 June 2024</h4>
+            </div>
+            <div class="timea">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 32 32"><path fill="#474747" d="M16 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14m0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4"/><path fill="#474747" d="M20.59 22L15 16.41V7h2v8.58l5 5.01z"/></svg>
+               <h4>4:00PM</h4>
+            </div>
+
+
+            </div>
+
+        </div>
+
+        <!--End events-->
+
+       <div class="subjectevents">
+            <h1>Announcements</h1>
+            <h5>See all</h5>
+           </div> 
+
+
+           <div class="anncdetail">
+            <div class="person">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24"><path fill="#2d9cf4" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m0 14c-2.03 0-4.43-.82-6.14-2.88a9.947 9.947 0 0 1 12.28 0C16.43 19.18 14.03 20 12 20"/></svg>
+                  <h3>Muhammed Hussen</h3>
+            </div>
+
+            <div class="message">
+                <p> Happy Founding Day! Let's celebrate the strength and unity that have defined our nation's journey.
+                </p>
+            </div>
+
+            <div class="dates">
+              <h4>1 June 2024</h4>
+              <h4>4:00PM</h4>
+
+            </div>
+           </div>
+
+           <!--<div class="anncdetail">
+            <div class="person">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24"><path fill="#2d9cf4" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m0 14c-2.03 0-4.43-.82-6.14-2.88a9.947 9.947 0 0 1 12.28 0C16.43 19.18 14.03 20 12 20"/></svg>
+                  <h3>Fahad khalid</h3>
+            </div>
+
+            <div class="message">
+                <p> Welcome back everyone! Happy Eid </p>
+            </div>
+
+            <div class="dates">
+              <h4>1 June 2024</h4>
+              <h4>4:00PM</h4>
+
+            </div>
+           </div>-->
+
+           <div class="subjectevents">
+            <h1>Company Summary</h1>
+         </div>
+         <div class="summary">
+         <table cellpadding="0" cellspacing="0" border="0">
+
+          <tbody>
+              <tr>
+                  <td>Employees</td>
+                  <td>200</td>
+              </tr>
+              <tr>
+                  <td>Branches</td>
+                  <td>12</td>
+              </tr>
+
+              <tr>
+                  <td>Departments</td>
+                  <td>15</td>
+              </tr>
+              <tr>
+                  <td>Shifts</td>
+                  <td>15</td>
+              </tr>
+
+              <tr>
+                  <td>Biometric Devices</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Muaref Devices</td>
+                  <td>0</td>
+              </tr>
+
+          </tbody>
+         </table>
+        </div>
+            
+
+
+
+        </div>
+        
+
+
+        
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
